@@ -1,0 +1,29 @@
+{
+  "name": "HireWatch Dev",
+
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:24-bookworm",
+
+  "remoteUser": "node",
+
+  "forwardPorts": [
+    3000
+  ],
+
+  "portsAttributes": {
+    "3000": {
+      "label": "HireWatch Web",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "postCreateCommand": "corepack enable && pnpm install",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}

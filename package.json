@@ -1,0 +1,14 @@
+{
+  "name": "hirewatch",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @hirewatch/web dev",
+    "build": "pnpm --filter @hirewatch/web build",
+    "lint": "pnpm --filter @hirewatch/web lint"
+  }
+}
