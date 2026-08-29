@@ -9,6 +9,10 @@
   "scripts": {
     "dev": "pnpm --filter @hirewatch/web dev",
     "build": "pnpm --filter @hirewatch/web build",
-    "lint": "pnpm --filter @hirewatch/web lint"
+    "lint": "pnpm --filter @hirewatch/web lint",
+
+    "core:build": "pnpm --filter @hirewatch/core build",
+    "core:typecheck": "pnpm --filter @hirewatch/core typecheck",
+    "core:test": "pnpm --filter @hirewatch/core test"
   }
 }
