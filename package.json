@@ -13,6 +13,21 @@
 
     "core:build": "pnpm --filter @hirewatch/core build",
     "core:typecheck": "pnpm --filter @hirewatch/core typecheck",
-    "core:test": "pnpm --filter @hirewatch/core test"
+    "core:test": "pnpm --filter @hirewatch/core test",
+
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:status": "supabase status",
+    
+    "db:reset": "supabase db reset",
+    "db:lint": "supabase db lint",
+    
+    "db:types": "supabase gen types typescript --local --schema public > packages/db/src/database.types.ts",
+
+    "db:typecheck": "pnpm --filter @hirewatch/db typecheck",
+    "db:build": "pnpm --filter @hirewatch/db build"
+  },
+  "devDependencies": {
+    "supabase": "^2.116.0"
   }
 }
