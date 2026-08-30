@@ -25,7 +25,11 @@
     "db:types": "supabase gen types typescript --local --schema public > packages/db/src/database.types.ts",
 
     "db:typecheck": "pnpm --filter @hirewatch/db typecheck",
-    "db:build": "pnpm --filter @hirewatch/db build"
+    "db:build": "pnpm --filter @hirewatch/db build",
+
+    "crypto:typecheck": "pnpm --filter @hirewatch/crypto typecheck",
+    "crypto:test": "pnpm --filter @hirewatch/crypto test",
+    "crypto:build": "pnpm --filter @hirewatch/crypto build"    
   },
   "devDependencies": {
     "supabase": "^2.116.0"
