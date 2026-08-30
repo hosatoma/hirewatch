@@ -33,7 +33,7 @@
     }
   },
 
-  "postCreateCommand": "corepack enable && pnpm install",
+  "postCreateCommand": "corepack enable && pnpm install && git config --global user.name 'hosatoma' && git config --global user.email '63569709+hosatoma@users.noreply.github.com'",
 
   "customizations": {
     "vscode": {
