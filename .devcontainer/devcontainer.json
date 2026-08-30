@@ -5,13 +5,30 @@
 
   "remoteUser": "node",
 
+  // Supabase CLIはローカルスタックをDockerで起動するため、Dev Containerからホスト側Dockerを利用できるようにする
+  // このFeatureはDocker daemonをDev Container内にもう一つ立てるのではなく、ホスト側Docker socketを再利用してDocker CLIを使えるようにするもの
+  // Feature自身がprivileged: trueとDockerデータ用volumeを設定してくれる
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:4": {}
+  },
+
   "forwardPorts": [
-    3000
+    3000,
+    54321,
+    54323
   ],
 
   "portsAttributes": {
     "3000": {
       "label": "HireWatch Web",
+      "onAutoForward": "notify"
+    },
+    "54321": {
+      "label": "Supabase API",
+      "onAutoForward": "silent"
+    },
+    "54323": {
+      "label": "Supabase Studio",
       "onAutoForward": "notify"
     }
   },
