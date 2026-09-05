@@ -27,6 +27,8 @@
     "db:typecheck": "pnpm --filter @hirewatch/db typecheck",
     "db:build": "pnpm --filter @hirewatch/db build",
 
+    "db:test:integration": "pnpm --filter @hirewatch/db test:integration",
+
     "crypto:typecheck": "pnpm --filter @hirewatch/crypto typecheck",
     "crypto:test": "pnpm --filter @hirewatch/crypto test",
     "crypto:build": "pnpm --filter @hirewatch/crypto build"    
