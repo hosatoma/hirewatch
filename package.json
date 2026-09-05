@@ -31,7 +31,11 @@
 
     "crypto:typecheck": "pnpm --filter @hirewatch/crypto typecheck",
     "crypto:test": "pnpm --filter @hirewatch/crypto test",
-    "crypto:build": "pnpm --filter @hirewatch/crypto build"    
+    "crypto:build": "pnpm --filter @hirewatch/crypto build",
+
+    "application:typecheck": "pnpm --filter @hirewatch/application typecheck",
+    "application:test": "pnpm --filter @hirewatch/application test",
+    "application:build": "pnpm --filter @hirewatch/application build"
   },
   "devDependencies": {
     "supabase": "^2.116.0"
