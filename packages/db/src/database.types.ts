@@ -220,7 +220,20 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      observe_candidate_state: {
+        Args: {
+          p_candidate_hmac: string
+          p_fingerprint: string
+          p_observed_at?: string
+          p_sheet_source_id: string
+        }
+        Returns: {
+          observation_status: string
+          result_first_seen_at: string
+          result_last_changed_at: string
+          result_last_seen_at: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
