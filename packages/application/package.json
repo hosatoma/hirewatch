@@ -19,13 +19,18 @@
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+
+    "test:integration": "vitest run src/observe-and-evaluate-candidate.integration.test.ts"
   },
   "dependencies": {
     "@hirewatch/core": "workspace:*",
     "@hirewatch/crypto": "workspace:*"
   },
   "devDependencies": {
+    "@hirewatch/db": "workspace:*",
+    "@types/node": "^26.4.1",
+    "dotenv": "^17.4.2",
     "typescript": "^7.0.2",
     "vitest": "^4.1.11"
   }
