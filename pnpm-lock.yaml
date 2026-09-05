@@ -58,6 +58,15 @@ importers:
         specifier: workspace:*
         version: link:../crypto
     devDependencies:
+      '@hirewatch/db':
+        specifier: workspace:*
+        version: link:../db
+      '@types/node':
+        specifier: ^26.4.1
+        version: 26.4.1
+      dotenv:
+        specifier: ^17.4.2
+        version: 17.4.2
       typescript:
         specifier: ^7.0.2
         version: 7.0.2

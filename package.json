@@ -35,7 +35,9 @@
 
     "application:typecheck": "pnpm --filter @hirewatch/application typecheck",
     "application:test": "pnpm --filter @hirewatch/application test",
-    "application:build": "pnpm --filter @hirewatch/application build"
+    "application:build": "pnpm --filter @hirewatch/application build",
+    
+    "application:test:integration": "pnpm --filter @hirewatch/application test:integration"
   },
   "devDependencies": {
     "supabase": "^2.116.0"
