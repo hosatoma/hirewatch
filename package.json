@@ -9,6 +9,37 @@
   "scripts": {
     "dev": "pnpm --filter @hirewatch/web dev",
     "build": "pnpm --filter @hirewatch/web build",
-    "lint": "pnpm --filter @hirewatch/web lint"
+    "lint": "pnpm --filter @hirewatch/web lint",
+
+    "core:build": "pnpm --filter @hirewatch/core build",
+    "core:typecheck": "pnpm --filter @hirewatch/core typecheck",
+    "core:test": "pnpm --filter @hirewatch/core test",
+
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:status": "supabase status",
+    
+    "db:reset": "supabase db reset",
+    "db:lint": "supabase db lint",
+    
+    "db:types": "supabase gen types typescript --local --schema public > packages/db/src/database.types.ts",
+
+    "db:typecheck": "pnpm --filter @hirewatch/db typecheck",
+    "db:build": "pnpm --filter @hirewatch/db build",
+
+    "db:test:integration": "pnpm --filter @hirewatch/db test:integration",
+
+    "crypto:typecheck": "pnpm --filter @hirewatch/crypto typecheck",
+    "crypto:test": "pnpm --filter @hirewatch/crypto test",
+    "crypto:build": "pnpm --filter @hirewatch/crypto build",
+
+    "application:typecheck": "pnpm --filter @hirewatch/application typecheck",
+    "application:test": "pnpm --filter @hirewatch/application test",
+    "application:build": "pnpm --filter @hirewatch/application build",
+    
+    "application:test:integration": "pnpm --filter @hirewatch/application test:integration"
+  },
+  "devDependencies": {
+    "supabase": "^2.116.0"
   }
 }
