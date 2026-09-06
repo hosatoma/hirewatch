@@ -47,6 +47,50 @@ export type Database = {
           },
         ]
       }
+      google_connections: {
+        Row: {
+          connected_at: string
+          created_at: string
+          granted_scopes: string[]
+          last_error_code: string | null
+          last_used_at: string | null
+          refresh_token_encrypted: string
+          status: string
+          updated_at: string
+          workspace_id: string
+        }
+        Insert: {
+          connected_at?: string
+          created_at?: string
+          granted_scopes?: string[]
+          last_error_code?: string | null
+          last_used_at?: string | null
+          refresh_token_encrypted: string
+          status?: string
+          updated_at?: string
+          workspace_id: string
+        }
+        Update: {
+          connected_at?: string
+          created_at?: string
+          granted_scopes?: string[]
+          last_error_code?: string | null
+          last_used_at?: string | null
+          refresh_token_encrypted?: string
+          status?: string
+          updated_at?: string
+          workspace_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "google_connections_workspace_id_fkey"
+            columns: ["workspace_id"]
+            isOneToOne: true
+            referencedRelation: "workspaces"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       sheet_sources: {
         Row: {
           column_mapping: Json

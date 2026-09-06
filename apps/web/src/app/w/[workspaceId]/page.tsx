@@ -69,6 +69,12 @@ export default async function WorkspacePage({
         {workspace.name}
       </h1>
 
+      <div className="mt-8">
+        <a
+          href={`/api/integrations/google/connect?workspaceId=${workspace.id}`}
+        >Google Sheetを接続</a>
+      </div>
+
       <p className="mt-2 text-sm text-zinc-600">
         HireWatch Dashboard
       </p>
