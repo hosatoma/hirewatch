@@ -28,6 +28,7 @@
     "db:build": "pnpm --filter @hirewatch/db build",
 
     "db:test:integration": "pnpm --filter @hirewatch/db test:integration",
+    "db:test:rls": "supabase test db",
 
     "crypto:typecheck": "pnpm --filter @hirewatch/crypto typecheck",
     "crypto:test": "pnpm --filter @hirewatch/crypto test",
